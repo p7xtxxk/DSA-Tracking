@@ -6,7 +6,9 @@ import java.util.List;
 import java.util.Collections;
 
 public class Day9_Comparator {
-    public static class Student {
+
+    // comparable implemented
+    public static class Student implements Comparable<Student>{
         private String name;
         private int age;
         private int marks;
@@ -33,6 +35,14 @@ public class Day9_Comparator {
         public String toString() {
             return name + " | Age: " + age + " | Marks: " + marks;
         }
+
+        @Override
+        public int compareTo(Student that) {
+            if (this.age>that.age) return 1;
+            else if (this.age<that.age) return -1;
+            else return 0;
+        }
+        
     }
 
     public static class SortbyRollAsc implements Comparator<Student> {
@@ -93,6 +103,11 @@ public class Day9_Comparator {
         students.add(new Student("Anita", 20, 92));
         students.add(new Student("Kiran", 22, 78));
 
+        // comparable implemented 
+        students.sort(null);
+        Collections.sort(students);
+        
+        
         // type - 1: using class : remember use 'new' keyword
         Collections.sort(students, new SortbyRollAsc());
         Collections.sort(students, new SortbyRollDesc());
