@@ -20,7 +20,11 @@ The content is organized by topic or concept, with all code files placed under t
 
 ### 🛠️ Key Topics Covered
 
-This section will be updated as new topics are completed.
+1. ArrayList
+2. LinkedList
+3. Comparator
+4. Comparable
+5. Iterators
 
 ### 🚀 Usage and Development Workflow
 
