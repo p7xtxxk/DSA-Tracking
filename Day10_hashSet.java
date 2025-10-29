@@ -41,6 +41,7 @@ public class Day10_hashSet {
 
         // element presence check
         hash5.contains(677);
+        hash5.containsAll(list);
 
         // size
         hash5.size();

@@ -27,6 +27,7 @@ The content is organized by topic or concept, with all code files placed under t
 5. Iterators
 6. Set Basics
 7. HashSet and its methods
+8. LinkedHashSet and its methods
 
 ***
 
