@@ -62,6 +62,6 @@ public class Day10_SetBasics {
             System.out.println(it.next());
         }
 
-        // descending iterator and ListIterator arent allowed
+        // descending iterator and ListIterator arent allowe
     }
 }

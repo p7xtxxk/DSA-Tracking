@@ -1,4 +1,4 @@
-## 📁 DSA Practice in Java
+## 📁 DSA Practice in Java - by p7xtxxk
 
 ---
 
@@ -25,15 +25,8 @@ The content is organized by topic or concept, with all code files placed under t
 3. Comparator
 4. Comparable
 5. Iterators
-
-### 🚀 Usage and Development Workflow
-
-All contributions (which are personal practice files) follow a simple, atomic commit workflow:
-
-1.  **Work on a new file or topic:** Complete the code for a specific DSA problem/topic.
-2.  **Stage all changes:** `git add .`
-3.  **Commit the work:** `git commit -m "Day [X]: Completed [Topic] - [Problem Name/Focus]"`
-4.  **Push the commit:** `git push origin main` (or `master`)
+6. Set Basics
+7. HashSet and its methods
 
 ***
 
