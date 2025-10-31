@@ -30,6 +30,7 @@ The content is organized by topic or concept, with all code files placed under t
 8. LinkedHashSet and its methods
 9. TreeSet and its methods
 10. SortedSet and its methods
+11. NavigableSet and its methods
 
 
 ### Miscellaneous Topics Pending
