@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Day2_Comparator {
+public class Day2_ComparatorRev {
     public static void main(String args[]) {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         ArrayList<Student> list = new ArrayList<Student>();
