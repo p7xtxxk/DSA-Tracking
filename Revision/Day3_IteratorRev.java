@@ -22,13 +22,30 @@ public class Day3_IteratorRev {
         // ListIterator
         ListIterator<Integer> lit1 = list.listIterator();
         while (lit1.hasNext()) {
-            System.out.println(lit1.previousIndex());
-            lit1.next();
+            int x = lit1.next();
+            // add method
+            if (x == 20 || x == 40) {
+                lit1.add(5767);
+            }
+            System.out.println(lit1.nextIndex()); // 1,3,4,6,7
+            System.out.println(lit1.previousIndex()); // 0,2,3,5,6
         }
-        System.out.println(list);
-        ListIterator<Integer> lit2 = list.listIterator(list.size() - 1);
+        // [10, 20, 5767, 30, 40, 5767, 50]
+
+        ListIterator<Integer> lit2 = list.listIterator(list.size());
         while (lit2.hasPrevious()) {
-            lit2.previous();
+            int x = lit2.previous();
+            // add method
+            if (x == 20 || x == 40) {
+                lit2.add(5767);
+            }
+        }
+        // [10, 5767, 20, 30, 5767, 40, 50]
+
+        //  descending  iterator
+        Iterator<Integer> dit = list.descendingIterator();
+        while(dit.hasNext()) {
+            dit.next();
         }
     }
 }
