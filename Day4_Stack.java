@@ -1,54 +1,61 @@
 import java.io.*;
 import java.util.*;
 
-
 public class Day4_Stack {
     public static void main(String args[]) {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        
-        // basic declaration
+
+        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(
+                5, 10, 15, 20, 25, 30, 35, 40, 45, 50,
+                55, 60, 65, 70, 75, 80, 85, 90, 95, 100));
+
+        // normal declaration - access to stack and vector methods
         Stack<Integer> s1 = new Stack<Integer>();
-        
-        // List version
+        // list interface - list+stack methods
         List<Integer> s2 = new Stack<Integer>();
+        // vector interface - cannot call STACK methods
+        Vector<Integer> s3 = new Stack<Integer>();
+        // deque using arraydeque - preferred
+        Deque<Integer> s5 = new ArrayDeque<Integer>();
 
-        // Deque version
-        Deque<Integer> s3 = new ArrayDeque<Integer>();
+        s1.addAll(numbers);
 
-        // deque using LinkedList
-        Deque<Integer> s4 = new LinkedList<Integer>();
-
-        List<Integer> list = List.of(1,2,3,4,5,6,7);
-
-        s1.addAll(list);
-        s2.addAll(list);
-        s3.addAll(list);
-        s4.addAll(list);
-
-        System.out.println(s1);
-        System.out.println(s2);
-        System.out.println(s3);
-        System.out.println(s4);
-
-        // pop 
+        // stack methods
+        s1.push(12);
         s1.pop();
-
-        // push
-        s1.push(1234);
-
-        // peek
         s1.peek();
+        s1.empty();
+        s1.search(Integer.valueOf(30));
 
-        // empty check
-        s1.isEmpty();
-
-        // search
-        System.out.println(s1.search(1));
-
-        // clear()
+        // vector methods
+        s1.add(122);
+        s1.add(3, 122);
+        s1.addAll(numbers);
+        s1.addAll(5, numbers);
+        s1.remove(4);
+        s1.remove(Integer.valueOf(35));
+        s1.firstElement();
+        s1.lastElement();
+        s1.ensureCapacity(40);
+        s1.capacity();
+        s1.trimToSize();
+        s1.indexOf(33);
+        s1.lastIndexOf(33);
         s1.clear();
-        System.out.println(s1);
+        Iterator<Integer> it = s1.iterator();
+        while (it.hasNext()) {
+            it.next();
+        }
+        ListIterator<Integer> lit1 = s1.listIterator();
+        while (lit1.hasNext()) {
+            lit1.next();
+        }
+        ListIterator<Integer> lit2 = s1.listIterator(s1.size() - 1);
+        while (lit2.hasPrevious()) {
+            lit2.previous();
+        }
 
-        
+        // System.out.println(s1.search(Integer.valueOf(345)));
+
     }
 }
