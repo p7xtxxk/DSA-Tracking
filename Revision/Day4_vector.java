@@ -40,9 +40,9 @@ public class Day4_vector {
         }
         ListIterator<Integer> lit1 = v4.listIterator();
         while (lit1.hasNext()) {
-            lit.next();
+            lit1.next();
         }
-        ListIterator<Integer> lit2 = v4.ListIterator(size() - 1);
+        ListIterator<Integer> lit2 = v4.listIterator(v4.size() - 1);
         while (lit2.hasPrevious()) {
             lit2.previous();
         }
